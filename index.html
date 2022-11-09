@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- link fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
         <!-- link css -->
         <link rel="stylesheet" href="css/style.css">
 
@@ -14,31 +17,44 @@
         
         <!-- container principale -->
         <div class="container">
-
-            <!-- container immagine in evidenza -->
-            <div id="selected-img-container">
-
-                <!-- qui ci andrà l'immagine in evidenza -->
-
-            </div>
-
+            
             <!-- carousel container-->
-            <div id="carousel-container">
+            <div id="container-frame">
 
-                <!-- prev/next buttons  -->
-                <div class="prev" id="up"><i class="fa-solid fa-chevron-up"></i></div>
-                <div class="next" id="down"><i class="fa-solid fa-chevron-down"></i></div>
+                    
+                    <div id="selected-img-container">
 
-                <!-- images -->
+                        <!-- qui ci andrà l'immagine in evidenza -->
+                        <div class="item-big active">
+                            <img src="img/01.webp" alt="img">
+                            <div class="image-text">
+                                <h2>Marvel's Spiderman Miles Morales</h2>
+                                <p>Experience the rise of Miles Morlaes as the new hero masters incredible, explosive new powers to become his own Spider-Man. </p>
+                            </div>
+                        </div>
+                        
+                    </div>
 
-                <!-- <div class="item active"><img src="img/01.webp" alt="img"></div>
-                <div class="item"><img src="img/02.webp" alt="img"></div>
-                <div class="item"><img src="img/03.webp" alt="img"></div>
-                <div class="item"><img src="img/04.webp" alt="img"></div>
-                <div class="item"><img src="img/05.webp" alt="img"></div> -->
+                
+                
+                    <div id="carousel-container">
+                        
+                        <!-- prev/next buttons  -->
+                        <div class="prev" id="up"><i class="fa-solid fa-chevron-up"></i></div>
+                        <div class="next" id="down"><i class="fa-solid fa-chevron-down"></i></div>
+
+                        <!-- images -->
+
+                        <div class="item"><img src="img/01.webp" alt="img"></div>
+                        <div class="item"><img src="img/02.webp" alt="img"></div>
+                        <div class="item"><img src="img/03.webp" alt="img"></div>
+                        <div class="item"><img src="img/04.webp" alt="img"></div>
+                        <div class="item"><img src="img/05.webp" alt="img"></div>
+                    </div>
+                    
+                
             </div>
         </div>
-        
         <!-- link js -->
         <script src="js/main.js"></script>
     </body>
