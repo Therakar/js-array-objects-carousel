@@ -56,14 +56,47 @@ images.forEach((elm, index) => {
     carouselImgContainer.append(templateCarousel); //appende gli elementi nel DOM
 });
 
-// ciclo for
-// for (let i = 0; i < images.length; i++){
-//     const image = images[i];
-//     //clona template carosello
-//     const templateCarousel = document.getElementById('carousel-img-template').content.cloneNode(true);
-    
-//     //compilazione HTML
-//     templateCarousel.querySelector('img').src = images[i].image; //compila l'src dell'immagine
-//     templateCarousel.querySelector('img').alt = images[i].title; //compila l'alt dell'immagine   
-//     carouselImgContainer.append(templateCarousel); 
-// };   
+//seleziono tutti gli item e li metto in una costante items
+const items = document.querySelectorAll('.item');
+
+const btnNext = document.querySelector('.next'); //richiamo la classe del bottone next
+//aggiunge event listener al btn next
+btnNext.addEventListener('click', function(){
+    //rimuove l'active dall'item attivo
+    document.querySelector('.item.active').classList.remove('active');
+    if (currentImageIndex === images.length - 1){
+        currentImageIndex = 0;
+    } else {
+    //incremento currentImageIndex
+    currentImageIndex ++;
+    }
+    //assegno la classe active al prossimo item
+    items[currentImageIndex].classList.add('active');
+
+    //modifico l'immagine in evidenza di conseguenza
+    selctedImgContainer.querySelector('img').src = images[currentImageIndex].image; //compila l'src dell'immagine
+    selctedImgContainer.querySelector('img').alt = images[currentImageIndex].title; //compila l'alt dell'immagine    
+    selctedImgContainer.querySelector('.image-text h2').innerHTML = images[currentImageIndex].title; //compila l'h2 
+    selctedImgContainer.querySelector('.image-text p').innerHTML = images[currentImageIndex].text; //compila il p
+});
+
+const btnPrev = document.querySelector('.prev'); //richiamo la classe del bottone prev
+//aggiunge event listener al btn prev
+btnPrev.addEventListener('click', function(){
+    //rimuove l'active dall'item attivo
+    document.querySelector('.item.active').classList.remove('active');
+    if (currentImageIndex === 0){
+        currentImageIndex = images.length - 1;
+    } else {
+    //incremento currentImageIndex
+    currentImageIndex --;
+    }
+    //assegno la classe active al prossimo item
+    items[currentImageIndex].classList.add('active');
+
+    //modifico l'immagine in evidenza di conseguenza
+    selctedImgContainer.querySelector('img').src = images[currentImageIndex].image; //compila l'src dell'immagine
+    selctedImgContainer.querySelector('img').alt = images[currentImageIndex].title; //compila l'alt dell'immagine    
+    selctedImgContainer.querySelector('.image-text h2').innerHTML = images[currentImageIndex].title; //compila l'h2 
+    selctedImgContainer.querySelector('.image-text p').innerHTML = images[currentImageIndex].text; //compila il p
+});
