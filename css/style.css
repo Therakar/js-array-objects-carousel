@@ -12,7 +12,7 @@ body{
 
 
 /* SRTUCTURE */
-.container{
+#container{
     width : 100vw;
     height: 100vh;
     margin: 0 auto;
@@ -33,7 +33,7 @@ body{
 #selected-img-container{
     height: 100%;
     width: 85%;
-    background-color: aqua; /* DEBUG*/
+    
 }
 
 #carousel-container{

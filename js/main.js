@@ -25,3 +25,40 @@ const images = [
     }
 ];
 
+//UTILITY
+let currentImageIndex = 0;
+const selctedImgContainer = document.getElementById("selected-img-container"); //richiamo container delle immagini selezionate
+const carouselImgContainer = document.getElementById("carousel-container"); //richiamo container delle immagini del carousel
+
+//clono il template delle immagini selezionate
+const templateSelected = document.getElementById('selected-obj-template').content.cloneNode(true);
+//compilazione HTML
+templateSelected.querySelector('img').src = images[currentImageIndex].image; //compila l'src dell'immagine
+templateSelected.querySelector('img').alt = images[currentImageIndex].title; //compila l'alt dell'immagine    
+templateSelected.querySelector('.image-text h2').innerHTML = images[currentImageIndex].title; //compila l'h2 
+templateSelected.querySelector('.image-text p').innerHTML = images[currentImageIndex].text; //compila il p
+
+selctedImgContainer.append(templateSelected);
+
+//ciclo forEach
+images.forEach((elm) =>{
+    // clona template carosello
+    const templateCarousel = document.getElementById('carousel-img-template').content.cloneNode(true);
+    
+    //compilazione HTML
+    templateCarousel.querySelector('img').src = elm.image; //compila l'src dell'immagine
+    templateCarousel.querySelector('img').alt = elm.title; //compila l'alt dell'immagine   
+    carouselImgContainer.append(templateCarousel); 
+});
+
+//ciclo for
+// for (let i = 0; i < images.length; i++){
+//     const image = images[i];
+//     //clona template carosello
+//     const templateCarousel = document.getElementById('carousel-img-template').content.cloneNode(true);
+    
+//     //compilazione HTML
+//     templateCarousel.querySelector('img').src = images[i].image; //compila l'src dell'immagine
+//     templateCarousel.querySelector('img').alt = images[i].title; //compila l'alt dell'immagine   
+//     carouselImgContainer.append(templateCarousel); 
+// };   

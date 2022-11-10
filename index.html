@@ -21,70 +21,50 @@
     <body>
         
         <!-- container principale -->
-        <div class="container">
+        <div id="container">
             
             <!-- carousel container-->
-            
-        </div>
-
-        <!-- template -->
-        <template>
             <div id="container-frame">
 
                     
-                <div id="selected-img-container">
+                    <div id="selected-img-container">
 
-                    <!-- qui ci andrà l'immagine in evidenza -->
-                    <div class="item-big active">
-                        <img src="img/01.webp" alt="img">
-                        <div class="image-text">
-                            <h2>Marvel's Spiderman Miles Morales</h2>
-                            <p>Experience the rise of Miles Morlaes as the new hero masters incredible, explosive new powers to become his own Spider-Man. </p>
-                        </div>
+                        <!-- qui ci andrà l'immagine in evidenza -->
+                        
                     </div>
-                    <div class="item-big active">
-                        <img src="img/01.webp" alt="img">
-                        <div class="image-text">
-                            <h2>Marvel's Spiderman Miles Morales</h2>
-                            <p>Experience the rise of Miles Morlaes as the new hero masters incredible, explosive new powers to become his own Spider-Man. </p>
-                        </div>
-                    </div>
-                    <div class="item-big active">
-                        <img src="img/01.webp" alt="img">
-                        <div class="image-text">
-                            <h2>Marvel's Spiderman Miles Morales</h2>
-                            <p>Experience the rise of Miles Morlaes as the new hero masters incredible, explosive new powers to become his own Spider-Man. </p>
-                        </div>
-                    </div>
-                    <div class="item-big active">
-                        <img src="img/01.webp" alt="img">
-                        <div class="image-text">
-                            <h2>Marvel's Spiderman Miles Morales</h2>
-                            <p>Experience the rise of Miles Morlaes as the new hero masters incredible, explosive new powers to become his own Spider-Man. </p>
-                        </div>
+
+                
+                
+                    <div id="carousel-container">
+                        
+                        <!-- prev/next buttons  -->
+                        <div class="prev" id="up"><i class="fa-solid fa-chevron-up"></i></div>
+                        <div class="next" id="down"><i class="fa-solid fa-chevron-down"></i></div>
+
+                        <!-- images -->
+
+
                     </div>
                     
-                </div>
-
-            
-            
-                <div id="carousel-container">
-                    
-                    <!-- prev/next buttons  -->
-                    <div class="prev" id="up"><i class="fa-solid fa-chevron-up"></i></div>
-                    <div class="next" id="down"><i class="fa-solid fa-chevron-down"></i></div>
-
-                    <!-- images -->
-
-                    <div class="item"><img src="img/01.webp" alt="img"></div>
-                    <div class="item"><img src="img/02.webp" alt="img"></div>
-                    <div class="item"><img src="img/03.webp" alt="img"></div>
-                    <div class="item"><img src="img/04.webp" alt="img"></div>
-                    <div class="item"><img src="img/05.webp" alt="img"></div>
-                </div>
+                
+            </div>
         </div>
+
+        <template id="selected-obj-template">
+            <div class="item-big active">
+                <img src="img/01.webp" alt="img">
+                <div class="image-text">
+                    <h2>Marvel's Spiderman Miles Morales</h2>
+                    <p>Experience the rise of Miles Morlaes as the new hero masters incredible, explosive new powers to become his own Spider-Man. </p>
+                </div>
+            </div>
         </template>
-        
+
+        <template id="carousel-img-template">
+            <div class="item"><img src="img/01.webp" alt="img"></div>
+        </template>
+
+
         <!-- link js -->
         <script src="js/main.js"></script>
     </body>
