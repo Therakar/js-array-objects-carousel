@@ -26,7 +26,7 @@ const images = [
 ];
 
 //UTILITY
-let currentImageIndex = 4;
+let currentImageIndex = 0;
 const selctedImgContainer = document.getElementById("selected-img-container"); //richiamo container delle immagini selezionate
 const carouselImgContainer = document.getElementById("carousel-container"); //richiamo container delle immagini del carousel
 
@@ -38,7 +38,7 @@ templateSelected.querySelector('img').alt = images[currentImageIndex].title; //c
 templateSelected.querySelector('.image-text h2').innerHTML = images[currentImageIndex].title; //compila l'h2 
 templateSelected.querySelector('.image-text p').innerHTML = images[currentImageIndex].text; //compila il p
 
-selctedImgContainer.append(templateSelected);
+selctedImgContainer.append(templateSelected); //appende gli elementi nel DOM
 
 //ciclo forEach
 images.forEach((elm, index) => {
@@ -47,13 +47,13 @@ images.forEach((elm, index) => {
     
     //SE l'index dell'elemnto dell'array è uguale al currentImageIndex allora assegno la classe 'active' all'elemento selezionato
     if( index === currentImageIndex){
-        templateCarousel.querySelector('.item').classList.add('active');
+        templateCarousel.querySelector('.item').classList.add('active'); //assegna la classe active
     }
 
     //compilazione HTML
     templateCarousel.querySelector('img').src = elm.image; //compila l'src dell'immagine
     templateCarousel.querySelector('img').alt = elm.title; //compila l'alt dell'immagine   
-    carouselImgContainer.append(templateCarousel); 
+    carouselImgContainer.append(templateCarousel); //appende gli elementi nel DOM
 });
 
 // ciclo for
